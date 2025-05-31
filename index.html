@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>News Channels</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      gap: 30px;
+    }
+    .box {
+      width: 120px;
+      height: 120px;
+      background-color: #007BFF;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .box:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="box" href="https://example.com/tv9-stream.m3u8" target="_blank">TV9</a>
+    <a class="box" href="https://example.com/tv5-stream.m3u8" target="_blank">TV5</a>
+    <a class="box" href="https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/ntv_nim_https/110322/ntv/playlist.m3u8?hdnts=st=1748687240~exp=1748690840~acl=!*/110322/ntv/*!yuppTVCom_5_-1_60250d14d2574544_IN_43.225.20.182/payload/yuppTVCom_5_-1_60250d14d2574544_IN_43.225.20.182/*~hmac=6f4c411e9498373357cf2d9f2b35ead8b7f9335b52fc6e1a1fb9050663829bd5&ads.app_bundle=&ads.app_store_url=&ads.content_livestream=1&ads.language=TEL&ads.content_genre=NEWS&ads.channel=58&ads.channel_name=NTV&ads.network_name=yupptv&ads.user=0" target="_blank">NTV</a>
+  </div>
+</body>
+</html>
