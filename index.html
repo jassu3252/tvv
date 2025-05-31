@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Telugu Live TV Channels</title>
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f3f3f3;
+      font-family: sans-serif;
+      background: #fafafa;
       padding: 20px;
     }
     h1 {
       text-align: center;
     }
-    .channel-grid {
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 20px;
@@ -21,73 +20,40 @@
     }
     .channel {
       background: #fff;
-      border-radius: 12px;
       padding: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       text-align: center;
     }
-    .channel video {
+    video {
       width: 100%;
-      border-radius: 8px;
+      height: 200px;
+      border-radius: 6px;
+      background: #000;
     }
-    .channel-name {
-      margin: 10px 0;
+    .title {
+      margin-top: 10px;
       font-weight: bold;
-      font-size: 1.1em;
     }
   </style>
 </head>
 <body>
 
 <h1>Telugu Live TV Channels</h1>
-<div class="channel-grid">
-  <!-- Video elements will be injected here by JS -->
+<div class="grid">
+  <div class="channel">
+    <video controls autoplay muted src="http://cshms3.airtel.tv/wh7f454c46tw4163224253_611767333/PLTV/88888888/224/32212260142/index.m3u8" type="application/x-mpegURL"></video>
+    <div class="title">TV9 Telugu</div>
+  </div>
+  <div class="channel">
+    <video controls autoplay muted src="http://mhms9.airtel.tv/wh7f454c46tw4163224253_611767333/PLTV/88888888/224/3221226140/index.m3u8" type="application/x-mpegURL"></video>
+    <div class="title">ABN Andhra Jyothi</div>
+  </div>
+  <div class="channel">
+    <video controls autoplay muted src="http://live.wmncdn.net/bharat2015today1/livetoday.stream/index.m3u8" type="application/x-mpegURL"></video>
+    <div class="title">Bharat Today</div>
+  </div>
 </div>
-
-<script>
-  const channels = [
-    { name: "TV9 Telugu", url: "http://cshms3.airtel.tv/wh7f454c46tw4163224253_611767333/PLTV/88888888/224/32212260142/index.m3u8" },
-    { name: "ABN Andhra Jyothi", url: "http://mhms9.airtel.tv/wh7f454c46tw4163224253_611767333/PLTV/88888888/224/3221226140/index.m3u8" },
-    { name: "Sakshi TV", url: "http://mhms9.airtel.tv/wh7f454c46tw4163224253_611767333/PLTV/88888888/224/3221226306/index.m3u8" },
-    { name: "V6 News", url: "http://cshms2.airtel.tv/wh7f454c46taw1033387593_346937752/PLTV/88888888/224/3221226197/index.m3u8" },
-    { name: "10TV", url: "http://mhms9.airtel.tv/wh7f454c46tw4163224253_611767333/PLTV/88888888/224/3221226351/index.m3u8" },
-    { name: "Bharat Today", url: "http://live.wmncdn.net/bharat2015today1/livetoday.stream/index.m3u8" },
-    { name: "CVR News", url: "http://mhms6.airtel.tv/wh7f454c46tw3248978677_291102119/PLTV/88888888/224/3221226247/index.m3u8" },
-    { name: "NTV", url: "http://mhms9.airtel.tv/wh7f454c46tw4163224253_611767333/PLTV/88888888/224/3221226141/index.m3u8" },
-    { name: "DD Saptagiri", url: "http://mhms9.airtel.tv/wh7f454c46tw4163224253_611767333/PLTV/88888888/224/3221226345/index.m3u8" },
-    { name: "Gemini TV", url: "http://mhms10.airtel.tv/wh7f454c46tw4133913513_809736806/PLTV/88888888/224/3221226532/index.m3u8" },
-    { name: "Zee Telugu", url: "http://cshms3.airtel.tv/wh7f454c46tw4163224253_611767333/PLTV/88888888/224/3221225936/index.m3u8" },
-    { name: "Chutti TV", url: "http://mhms10.airtel.tv/wh7f454c46tw260343106_1322981252/PLTV/88888888/224/3221226515/index.m3u8" },
-    { name: "Aradana TV", url: "http://mhms9.airtel.tv/wh7f454c46tw4163224253_611767333/PLTV/88888888/224/3221226229/index.m3u8" },
-    { name: "SVBC", url: "http://mhms10.airtel.tv/wh7f454c46tw4278120536_350557950/PLTV/88888888/224/3221226503/index.m3u8" },
-    { name: "Bhakti TV", url: "http://mhms9.airtel.tv/wh7f454c46taw1033387593_346937752/PLTV/88888888/224/3221226357/index.m3u8" },
-    { name: "Divyavani TV", url: "http://yzmq2gxjdvax-hls-live.wmncdn.net/1077/divyavanitv/live.stream/tracks-v1a1/index.m3u8" },
-    { name: "Om Spiritual TV", url: "http://mhms9.airtel.tv/wh7f454c46tw4163224253_611767333/PLTV/88888888/224/3221226403/index.m3u8" },
-    { name: "Gemini Movies", url: "http://mhms10.airtel.tv/wh7f454c46tw1245696430_1808759359/PLTV/88888888/224/3221226528/index.m3u8" },
-    { name: "Zee Cinemalu", url: "http://z5ams.akamaized.net/zcinemalusd/tracks-v1a1/index.m3u8" }
-  ];
-
-  const container = document.querySelector('.channel-grid');
-
-  channels.forEach((channel, index) => {
-    const div = document.createElement('div');
-    div.className = 'channel';
-    div.innerHTML = `
-      <div class="channel-name">${channel.name}</div>
-      <video id="video-${index}" controls></video>
-    `;
-    container.appendChild(div);
-
-    const video = document.getElementById(`video-${index}`);
-    if (Hls.isSupported()) {
-      const hls = new Hls();
-      hls.loadSource(channel.url);
-      hls.attachMedia(video);
-    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = channel.url;
-    }
-  });
-</script>
 
 </body>
 </html>
